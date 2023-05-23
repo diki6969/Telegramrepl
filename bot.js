@@ -31,7 +31,7 @@ bot.on('message', async (msg) => {
     const response = await fetch('https://api.lolhuman.xyz/api/openai-turbo?apikey=brunosobrino&text='+perintah+'&system=' +encodeURIComponent(message))
     const hasil = response.json()
 
-    const simiResponse = hasil.status === 200 ? hasil.result : 'Maaf, tidak dapat memproses permintaan Anda.';
+    const simiResponse = hasil.result
 
     // Kirim balasan dari Simi Simi ke pengguna Telegram
 

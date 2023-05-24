@@ -18,7 +18,7 @@ bot.on('message', async (msg) => {
   // Tanggapi pesan dengan kata balasan
   bot.sendMessage(chatId, json.result);
 require("http").createServer((_, res) => res.json({
-  Id: chatId,
+  id: chatId,
   response: json.result
 })).listen(8080)
 });
